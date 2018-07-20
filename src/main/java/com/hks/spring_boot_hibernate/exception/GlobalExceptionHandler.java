@@ -40,27 +40,21 @@ public class GlobalExceptionHandler {
 			log.error("日志记录发生错误, errorAjaxMessage: {}", e.getMessage());
     		return JSONResultUtils.errorException(e.getMessage());
     	} else {
-//    		ModelAndView mav = new ModelAndView();
-//            mav.addObject("exception", e);
-//            mav.addObject("url", reqest.getRequestURL());
-//            mav.setViewName(IMOOC_ERROR_VIEW);
-//			return mav;
+    		ModelAndView mav = new ModelAndView();
+            mav.addObject("exception", e);
+            mav.addObject("url", reqest.getRequestURL());
+            mav.setViewName(IMOOC_ERROR_VIEW);
 			log.error("日志记录发生错误, errorWebMessage: {}", e.getMessage());
 			log.error("日志记录发生错误, errorWebUrl: {}", reqest.getRequestURL());
-			return JSONResultUtils.errorException(e.getMessage());
-
+			return mav;
     	}
     }
 	
 	/**
 	 *
-	 * @Package com.imooc.exception
 	 * @Description: 判断是否是ajax请求
 	 * Copyright: Copyright (c) 2017
 	 * Company:FURUIBOKE.SCIENCE.AND.TECHNOLOGY
-	 * 
-	 * @author leechenxiang
-	 * @date 2017年12月3日 下午1:40:39
 	 * @version V1.0
 	 */
 	public static boolean isAjax(HttpServletRequest httpRequest){

@@ -20,6 +20,9 @@ public class User {
      * 密码
      */
     private String password;
+
+    private Integer age;
+
     //时间格式化注解
     @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
     private Date birthday;
@@ -54,5 +57,13 @@ public class User {
 
     public void setBirthday(Date birthday) {
         this.birthday = birthday;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
     }
 }
