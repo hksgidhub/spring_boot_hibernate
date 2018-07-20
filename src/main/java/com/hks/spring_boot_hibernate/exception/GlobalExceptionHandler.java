@@ -10,6 +10,9 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/*
+ * 捕获全局异常显示友好页面
+ */
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
