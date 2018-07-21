@@ -22,7 +22,8 @@
 //
 //	final static Logger log = LoggerFactory.getLogger(LogServiceTakeTime.class);
 //
-//	@Pointcut("execution(* com.imooc.service..*.*(..))")
+//	//pointcut  切面
+//	@Pointcut("execution(* com.hks.service..*.*(..))")
 //	public void performance(){
 //	}
 //
