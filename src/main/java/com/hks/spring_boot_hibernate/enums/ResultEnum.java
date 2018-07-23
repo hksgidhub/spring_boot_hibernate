@@ -2,6 +2,7 @@ package com.hks.spring_boot_hibernate.enums;
 
 /**
  * Enum
+ * 使用ResultEnum.ERROR就会得到里面的值
  */
 public enum ResultEnum {
 

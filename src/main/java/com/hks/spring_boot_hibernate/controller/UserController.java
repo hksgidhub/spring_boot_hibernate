@@ -72,9 +72,9 @@ public class UserController {
 
     //查询用户
     @RequestMapping("/selectUser")
-    public String selectUser(@RequestParam("userid") String userid){
-        //return JSONResultUtils.ok(userRepository.findById(userid));
-        return "user";
+    public JSONResultUtils selectUser(@RequestParam("userid") String userid){
+        return JSONResultUtils.ok(userRepository.findById(userid));
+        //return "user";
     }
 
     //jpa自定义查询

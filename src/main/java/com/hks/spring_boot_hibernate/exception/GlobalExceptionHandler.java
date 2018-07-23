@@ -38,6 +38,11 @@ public class GlobalExceptionHandler {
                                HttpServletResponse response, Exception e) throws Exception {
     	
     	e.printStackTrace();
+
+    	//是否是自定义异常类抛出的异常
+//		if(e instanceof UserException){
+//
+//		}
     	
     	if (isAjax(reqest)) {
 			log.error("日志记录发生错误, errorAjaxMessage: {}", e.getMessage());

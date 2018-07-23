@@ -21,6 +21,7 @@ public class WebMvcConfigurer extends WebMvcConfigurationSupport {
         registry.addInterceptor(new OneInterceptor()).addPathPatterns("/one/**");
 		registry.addInterceptor(new TwoInterceptor()).addPathPatterns("/two/**");//.addPathPatterns("/one/**");
 
+		//registry.addResourceHandler("/sh/static/**").addResourceLocations("classpath:/static/");
 		super.addInterceptors(registry);
 	}
 
